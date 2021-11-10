@@ -1,0 +1,38 @@
+extends ./AdminPartials/_base
+block content 
+    .container 
+        .row
+            .col-md-5.offset-md-1
+                p.display-4 Category Table
+                br
+                table.table
+                    thead
+                        tr
+                            th ID
+                            th Name
+                        each category in categories
+                            tr
+                                th #{category.id}
+                                th #{category.name}
+                br
+                br
+                table.table
+                    thead
+                        tr
+                            th ID
+                            th Title
+                            th Image 
+                            th Desciption
+                            th Price
+                            th Category
+                        each product in products
+                            tr
+                                th #{product.id}
+                                th #{product.title}
+                                th #{product.image}
+                                th #{product.description}
+                                th #{product.price}
+                                th #{product.Category.name}
+                            
+
+                            

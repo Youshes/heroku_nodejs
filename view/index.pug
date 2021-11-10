@@ -1,0 +1,15 @@
+extends ./Partials/_base
+block content
+    .container
+        .row
+            .col-md-6.offset-md-4
+                each  products in product
+                    .card(style='width: 18rem;')
+                        img.card-img-top(src=`img/${products.image}` )
+                        .card-body
+                            h5.card-title #{products.title}
+                            p.card-text  #{products.description}
+                            br
+                            p.card-text #{products.Category.name}
+                            a.btn.btn-primary(href='#') Go somewhere
+                    

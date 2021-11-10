@@ -1,0 +1,11 @@
+extends ./AdminPartials/_base
+block content
+  .container
+    .row
+      .col-md-5.offset-md-3 
+        form(action="/admin/category" method="post") 
+          .mb-3
+            label.form-label(for='exampleFormControlInput1') Category Name
+            input#exampleFormControlInput1.form-control(type='text'  name="name")
+          button.btn.btn-primary(type="submit") Save
+
